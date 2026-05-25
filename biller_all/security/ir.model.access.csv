@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+download_pdf_wizard_user,download_pdf_wizard_user,model_download_pdf_wizard,base.group_user,1,1,1,1
+biller_record_user,biller_record_user,model_biller_record,base.group_user,1,1,1,1
+get_documents_wizard_user,get_documents_wizard_user,model_get_documents_wizard,base.group_user,1,1,1,1

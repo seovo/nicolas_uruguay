@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record model="ir.cron" id="dgi_record_receive_biller_documents">
+        <field name="name">Generate Received DGI Documents</field>
+        <field name="model_id" ref="model_get_documents_wizard" />
+        <field name="state">code</field>
+        <field name="code">model.manual_create_received_documents()</field>
+        <field name="user_id" ref="base.user_root" />
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field eval="False" name="doall" />
+    </record>
+</odoo>

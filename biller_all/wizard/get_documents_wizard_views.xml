@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="get_documents_wizard_form">
+            <field name="name">get_documents_wizard_form</field>
+            <field name="model">get.documents.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                    </group>
+                    <footer>
+                        <button string="Obtener comprobantes" type="object" name="manual_create_received_documents" class="oe_highlight"/>
+                        o
+                        <button class="oe_link" special="cancel" string="Salir"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="get_documents_wizard_action"
+                    name="Obtener documentos"
+                    res_model="get.documents.wizard"
+                    view_mode="form"
+                    target="new"/>
+
+        <menuitem
+            action="get_documents_wizard_action"
+            id="get_documents_wizard_menu"
+            sequence="100"
+            name="Obtener documentos"
+            parent="account.account_management_menu"
+        />
+
+    </data>
+</odoo>
+
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4-->
